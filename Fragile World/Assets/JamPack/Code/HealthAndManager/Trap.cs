@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class Trap : MonoBehaviour {
 
     [Header("Trap Damage")]
-    public int damage = 5;
+    public int damage = 1;
 
     [Header("Hit Event")]
 	public UnityEvent trapReachedEvent;
@@ -15,7 +15,7 @@ public class Trap : MonoBehaviour {
     public AudioSource trapHitSound;
 
     [Header("Trap Settings")]
-    public bool disableOnHit = false;
+    public bool disableOnHit = true;
 
     [Header("Debug Settings")]
     public bool DEBUG_MODE = false;
