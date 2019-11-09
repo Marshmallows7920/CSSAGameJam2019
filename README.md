@@ -16,4 +16,5 @@ They never stopped trying. Never thought to give up. But the Monsters could neve
 
 But a Prophet was among the people, a wise individual who knew the stalemate would not last, and that change was inevitable.  
 The Prophet foretold a day would come for the walls to fall. Death would abound. The conflict would end. A short period of turmoil before a new order established itself.  
+
 _They did not, however, mention who the outcome would favour._
