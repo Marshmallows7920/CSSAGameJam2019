@@ -7,9 +7,10 @@ public class Health : MonoBehaviour {
 
     [Header("CurrentState")]
     public bool isActivated = true; // triggered by things, turned to false if destoryOnDeath is false and the item is destroyed
-    public int currentHealth = 10; // current health bar
-    public int maxHealth = 10; // reset to max health
-
+    public int currentHealth = 1; // current health bar
+    public int maxHealth = 1; // reset to max health
+    //max health
+    // - increa
     [Header("Health Script Settings")]
     public bool destroyOnDeath = false; // do we destroy this when its health runs out vs just deactivate it
     public Transform deathEffectPrefab; // normally i would use a prefab that includes a one shot particle system, audio effect, and a destroy self script
@@ -23,6 +24,8 @@ public class Health : MonoBehaviour {
 
     // Called by traps when they are hit. Applies damage to the player
     // Pass a negative value to heal instead
+
+
     public void TakeDamage(int damageRecieved){
         currentHealth = currentHealth - damageRecieved;
         damagedEvent.Invoke();
@@ -33,8 +36,13 @@ public class Health : MonoBehaviour {
         }
     }
 
+    public void receiveHP(){ // called when kills an enemy, always increases by 1HP
+        maxHealth++;
+        currentHealth++;
+    }
+
     // We hit a trap. Since we are not passing in damage, we just kill the player outright 
-    public void DeadlyBlow() {
+    public void DeadlyBlow() { //hero is dead
         if (DEBUG_MODE) {
             Debug.Log(gameObject.name + " was destroyed");
         }

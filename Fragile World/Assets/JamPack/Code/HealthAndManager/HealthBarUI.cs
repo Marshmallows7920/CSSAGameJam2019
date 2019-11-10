@@ -16,7 +16,6 @@ public class HealthBarUI : MonoBehaviour {
 	void Start () {
         healthSliderUI.maxValue = referencedHealth.maxHealth;
         healthSliderUI.value = referencedHealth.currentHealth;
-
     }
 	
 	// Update is called once per frame
